@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMFG@CVPR2023</title>
+    <meta name="viewport">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <meta content="https://web.northeastern.edu/smilelab/amfg2021/images/cvprlogo2021.png" property="og:image"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://web.northeastern.edu/smilelab/amfg2021/index.html" property="og:url"/>
+    <meta content="10th Workshop on AMFG @ 2021 CVPR" property="og:title"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0;" name="viewport">
+
+
+    <link href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" id="wsite-base-style" rel="stylesheet"
+          type="text/css"/>
+    <link href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" rel="stylesheet" type="text/css"/>
+    <link href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection"
+          rel="stylesheet"
+          type="text/css"/>
+
+    <link href="files/main_style.css?1512503121" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Cookie&subset=latin,latin-ext' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+
+    <style type='text/css'>
+        span {
+            font-weight: normal;
+        }
+
+        .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
+            font-family: "Lato" !important;
+        }
+
+        #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
+            color: #666c70 !important;
+        }
+
+        .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label {
+        }
+
+        .wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
+            font-family: "Lato" !important;
+            font-style: normal !important;
+        }
+
+        #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
+        }
+
+        .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title {
+        }
+
+        #wsite-title {
+            font-family: "Cookie" !important;
+            text-transform: none !important;
+            letter-spacing: 1px !important;
+        }
+
+        .wsite-menu-default a {
+            text-transform: uppercase !important;
+        }
+
+        .wsite-menu a {
+        }
+
+        .wsite-image div, .wsite-caption {
+        }
+
+        .galleryCaptionInnerText {
+        }
+
+        .fancybox-title {
+        }
+
+        .wslide-caption-text {
+        }
+
+        .wsite-phone {
+        }
+
+        .wsite-headline, .wsite-header-section .wsite-content-title {
+        }
+
+        .wsite-headline-paragraph, .wsite-header-section .paragraph {
+            font-family: "Lora" !important;
+            letter-spacing: 0px !important;
+        }
+
+        .wsite-button-inner {
+        }
+
+        .wsite-not-footer blockquote {
+        }
+
+        .wsite-footer blockquote {
+        }
+
+        .blog-header h2 a {
+        }
+
+        #wsite-content h2.wsite-product-title {
+        }
+
+        .wsite-product .wsite-product-price a {
+        }
+
+        @media screen and (min-width: 767px) {
+            .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
+                font-size: 20px !important;
+            }
+
+            #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
+            }
+
+            .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label {
+            }
+
+            .wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
+            }
+
+            #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
+            }
+
+            .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title {
+            }
+
+            #wsite-title {
+                font-size: 35px !important;
+            }
+
+            .wsite-menu-default a {
+            }
+
+            .wsite-menu a {
+            }
+
+            .wsite-image div, .wsite-caption {
+            }
+
+            .galleryCaptionInnerText {
+            }
+
+            .fancybox-title {
+            }
+
+            .wslide-caption-text {
+            }
+
+            .wsite-phone {
+            }
+
+            .wsite-headline, .wsite-header-section .wsite-content-title {
+            }
+
+            .wsite-headline-paragraph, .wsite-header-section .paragraph {
+            }
+
+            .wsite-button-inner {
+            }
+
+            .wsite-not-footer blockquote {
+            }
+
+            .wsite-footer blockquote {
+            }
+
+            .blog-header h2 a {
+            }
+
+            #wsite-content h2.wsite-product-title {
+            }
+
+            .wsite-product .wsite-product-price a {
+            }
+        }</style>
+
+    <script>
+        var STATIC_BASE = '//cdn1.editmysite.com/';
+        var ASSETS_BASE = '//cdn2.editmysite.com/';
+        var STYLE_PREFIX = 'wsite';
+    </script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+    <script src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&" type="text/javascript"></script>
+    <script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script>
+    <script type="text/javascript">_W.configDomain = "www.weebly.com";</script>
+    <script>_W.relinquish && _W.relinquish()</script>
+    <script src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&" type="text/javascript"></script>
+    <script> _W.themePlugins = {"navpane": {"condense": 1024, "forced": 1}};</script>
+    <script src='http://cdn2.editmysite.com/js/site/theme-plugins.js?buildTime=1234'></script>
+    <script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script>
+
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 / 60 / 60)) % 24);
+            var days = Math.floor(t / ((1000 / 60 / 60) * 24));
+            return {
+                total: t,
+                days: days,
+                hours: hours,
+                minutes: minutes,
+                seconds: seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector(".days");
+            var hoursSpan = clock.querySelector(".hours");
+            var minutesSpan = clock.querySelector(".minutes");
+            var secondsSpan = clock.querySelector(".seconds");
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        // example 15 days out
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        // example 1 day out = new Date(Date.parse(new Date()) + 1 * 24 * 60 * 60 * 1000);
+
+        if (new Date() > deadline) {
+            alert("COUNTDOWN COMPLETE! \n Some Call to Action!!!");
+        }
+
+        initializeClock("clockdiv", deadline);
+    </script>
+</head>
+<body class="header-page  wsite-page-index  wsite-theme-light">
+<div id="header">
+    <div class="container">
+        <div class="icons">
+            <div class="w-navpane-trigger hamburger">
+                <span></span>
+            </div>
+        </div>
+        <div class="logo"><span class="wsite-logo">
+
+	<a href=http://cvpr2019.thecvf.com/>
+		<img alt="CVPR Logo" src="images/cvprlogo2021.jpg" style="margin-top:-2px;margin-left:13px;"/>
+	</a>
+
+</span></div>
+        <div class="icons">
+
+
+            <a class="close w-navpane-close" href="#"><span></span></a>
+        </div>
+    </div>
+    <div class="w-navlist nav" id="navlist">
+        <ul class="wsite-menu-default">
+        </ul>
+    </div>
+    <div class="slide-panel" id="menu">
+        <div class="nav w-navpane" id="nav">
+            <div class="container">
+                <ul class="wsite-menu-default">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-panel" id="search">
+        <div class="container">Search by typing &amp; pressing enter</div>
+    </div>
+    <div class="slide-panel" id="cart">
+        <div class="container"><h2>YOUR CART</h2></div>
+    </div>
+</div>
+
+<div id="content">
+    <div id="banner">
+        <div class="wsite-elements wsite-not-footer wsite-header-elements">
+            <div class="wsite-section-wrap">
+                <div class="wsite-section wsite-header-section wsite-section-bg-image"
+                     style="height: 400px;vertical-align: middle;background-image: url(images/abstract-binary_00373618.jpg) ;background-repeat: no-repeat ;background-size: 100% ;background-color: transparent ;background-size: cover; opacity:0.7;filter:alpha(opacity=80);">
+                    <div class="wsite-section-content">
+
+                        <div class="banner-content">
+                            <div class="container">
+                                <div class="wsite-section-elements">
+                                    <div class="wsite-spacer" style="height:16px;"></div>
+
+                                    <div class="paragraph" style="text-align:center;"><font size="5"><font
+                                            color="#000000"><p style="background-color: #FFFFFF">
+                                        The 10th IEEE International Workshop on </p></font></font>
+                                    </div>
+
+<!--                                    <div class="wsite-spacer" style="height:100px;"></div>-->
+
+<!--                                    <h2 class="wsite-content-title" style="text-align:center;"><font color="#000000"; size="15">-->
+                                        <p style="background-color: #FFFFFF;"style="text-align:center;"><font color="#000000"; size="15">
+                                            <!--                                    <mark>-->
+                                            Analysis and Modeling of Faces and Gestures </font></p>
+                                        <!--                                            </mark>-->
+
+<!--                                    </h2>-->
+<!--                                    <div class="wsite-spacer" style="height:10px;"></div>-->
+                                    <h3>
+                                    <div class="paragraph" style="text-align:center;"><font color="#000000">
+                                        <p style="background-color: #FFFFFF">
+<!--                                            A deeper understanding of face, gestures, and across modalities<br>-->
+<!--                                        </p>-->
+<!--                                    </font>-->
+<!--                                    </div>-->
+
+                                    <!--<div class="wsite-spacer" style="height:0px;"></div>-->
+
+<!--                                    <div class="paragraph" style="text-align:center;"><font color="#000000">-->
+<!--                                        <p style="background-color: #FFFFFF">-->
+                                            In conjunction with CVPR 2021<br>
+<!--                                        </p>-->
+<!--                                    </font></div>-->
+
+<!--                                    <div class="paragraph" style="text-align:center;"><font color="#000000">-->
+<!--                                        <p style="background-color: #FFFFFF">-->
+                                        19 June 2021 (Saturday) starting from 3PM EST (Live)</p></font>
+<!--                                    </div>-->
+<!--</div>-->
+</div>
+                                        </h3>
+<!--                                    <div class="mt4 tc fw1 f2 near-white sans-serif center" id="clockdiv">-->
+<!--                                        <div class="pa2 br3 bg-blue dib">-->
+<!--                                            <span class="pa3 br3 bg-dark-blue dib days"></span>-->
+<!--                                            <div class="pt1 f5 fw1">Days</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="pa2 br3 bg-blue dib">-->
+<!--                                            <span class="pa3 br3 bg-dark-blue dib hours"></span>-->
+<!--                                            <div class="pt1 f5 fw1">Hours</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="pa2 br3 bg-blue dib">-->
+<!--                                            <span class="pa3 br3 bg-dark-blue dib minutes"></span>-->
+<!--                                            <div class="pt1 f5 fw1">Minutes</div>-->
+<!--                                        </div>-->
+<!--                                        <div class="pa2 br3 bg-blue dib">-->
+<!--                                            <span class="pa3 br3 bg-dark-blue dib seconds"></span>-->
+<!--                                            <div class="pt1 f5 fw1">Seconds</div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=""></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="wsite-elements wsite-not-footer" id="wsite-content">
+            <div class="wsite-section-wrap">
+                <div class="wsite-section wsite-body-section wsite-background-1" style="vertical-align: top;">
+                    <div class="wsite-section-content">
+                        <div class="container">
+                            <div class="wsite-section-elements">
+                                <div id="957870600915109264">
+                                    <div>
+                                        <style type="text/css">
+                                            #element-d08962e0-b3fc-40e8-a158-51ebe5e2fdbb code {
+                                                border: 1px solid #ddd;
+                                                background-color: #f8f8f8;
+                                                border-radius: 3px;
+                                                color: red;
+                                                margin: 0px 5px;
+                                            }
+
+                                            #element-d08962e0-b3fc-40e8-a158-51ebe5e2fdbb strong {
+                                                font-weight: bold;
+                                                text-transform: uppercase;
+                                            }
+
+                                        </style>
+                                        <div class="platform-element-contents"
+                                             data-platform-element-id="883206363783591195-1.0.2"
+                                             id="element-d08962e0-b3fc-40e8-a158-51ebe5e2fdbb">
+
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                        <script class="element-script"
+                                                type="text/javascript">function setupElement957870600915109264() {
+                                            var requireFunc = window.platformElementRequire || window.require;
+
+                                            // Relies on a global require, specific to platform elements
+                                            requireFunc([
+                                                'w-global',
+                                                'underscore',
+                                                'jquery',
+                                                'backbone',
+                                                'util/platform/elements/PlatformElement',
+                                                'util/platform/elements/PlatformElementSettings'
+                                            ], function (_W,
+                                                         _,
+                                                         $,
+                                                         Backbone,
+                                                         PlatformElement,
+                                                         PlatformElementSettings) {
+                                                var dependencies = null || [];
+                                                var platform_element_id = "883206363783591195-1.0.2";
+
+                                                if (typeof _W.loadedPlatformDependencies === 'undefined') {
+                                                    _W.loadedPlatformDependencies = [];
+                                                }
+
+                                                if (typeof _W.platformElements === 'undefined') {
+                                                    _W.platformElements = [];
+                                                }
+
+                                                if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+                                                    _W.platformElements[platform_element_id] = {};
+                                                    _W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+                                                    _W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+                                                }
+
+                                                if (_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length) {
+                                                    _.reduce(dependencies, function (promise, nextScript) {
+                                                        _W.loadedPlatformDependencies.push(nextScript);
+                                                        return promise.then(function () {
+                                                            return $.getScript(nextScript);
+                                                        });
+                                                    }, $().promise()).then(function () {
+                                                        _W.platformElements[platform_element_id].deferredObject.resolve();
+                                                    });
+                                                }
+
+                                                if (dependencies.length === 0) {
+                                                    _W.platformElements[platform_element_id].deferredObject.resolve();
+                                                }
+
+                                                _W.platformElements[platform_element_id].deferredPromise.done(function () {
+                                                    var _ElementDefinition = /**
+                                                     * This is required for element rendering to be possible
+                                                     * @type {PlatformElement}
+                                                     */
+                                                        (function () {
+
+                                                            var MyElement = PlatformElement.extend({
+                                                                initialize: function () {
+                                                                    var site_name = this.get_site_name('name');
+                                                                    if (site_name) {
+                                                                        jQuery('#wsite-title').text(site_name);
+                                                                        jQuery('a[href]').attr('href', function (i, h) {
+                                                                            return h + (h.indexOf('?') != -1 ? "&name=" + site_name : "?name=" + site_name);
+                                                                        });
+                                                                    }
+                                                                },
+                                                                get_site_name: function (sParam) {
+                                                                    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                                                                        sURLVariables = sPageURL.split('&'),
+                                                                        sParameterName,
+                                                                        i;
+
+                                                                    for (i = 0; i < sURLVariables.length; i++) {
+                                                                        sParameterName = sURLVariables[i].split('=');
+
+                                                                        if (sParameterName[0] === sParam) {
+                                                                            return sParameterName[1] === undefined ? true : sParameterName[1];
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                            });
+
+
+                                                            return MyElement;
+                                                        })();
+
+
+                                                    if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+                                                        var _ElementDefinition = PlatformElement.extend({});
+                                                    }
+
+                                                    var _Element = _ElementDefinition.extend({
+                                                        initialize: function () {
+                                                            // we still want to call the initialize function defined by the developer
+                                                            // however, we don't want to call it until placeholders have been replaced
+                                                            this.placeholderInterval = setInterval(function () {
+                                                                // so use setInterval to check for placeholders.
+                                                                if (this.$('.platform-element-child-placeholder').length == 0) {
+                                                                    clearInterval(this.placeholderInterval);
+                                                                    this.constructor.__super__.initialize.apply(this);
+                                                                }
+                                                            }.bind(this), 100);
+                                                        }
+                                                    });
+
+                                                    _Element.prototype.settings = new PlatformElementSettings({
+                                                        "company": "Weebly",
+                                                        "message": "rock"
+                                                    });
+                                                    _Element.prototype.settings.page_element_id = "957870600915109264";
+
+                                                    _Element.prototype.element_id = "d08962e0-b3fc-40e8-a158-51ebe5e2fdbb";
+                                                    _Element.prototype.user_id = "45182585";
+                                                    _Element.prototype.site_id = "223558737369296894";
+                                                    _Element.prototype.assets_path = "//marketplace.editmysite.com/elements/883206363783591195-1.0.2/assets/";
+                                                    new _Element({
+                                                        el: '#element-d08962e0-b3fc-40e8-a158-51ebe5e2fdbb'
+                                                    });
+                                                });
+                                            });
+
+                                        }
+
+                                        if (typeof document.documentElement.appReady == 'undefined') {
+                                            document.documentElement.appReady = 0;
+                                        }
+
+                                        if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+                                            setupElement957870600915109264();
+                                        } else if (document.createEvent && document.addEventListener) {
+                                            document.addEventListener('appReady', setupElement957870600915109264, false);
+                                        } else {
+                                            document.documentElement.attachEvent('onpropertychange', function (event) {
+                                                if (event.propertyName == 'appReady') {
+                                                    setupElement957870600915109264();
+                                                }
+                                            });
+                                        }
+
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
+                                                                                        size="6"><strong>Call for
+                                    Papers</strong></font></div>
+
+                                <div class="paragraph" style="text-align:justify;"><font color="#2a2a2a"><font><font>
+                                    We have experienced rapid advances in face, gesture, and cross-modality (e.g., voice
+                                    and face) technologies. This is thanks to deep learning (i.e., dating back to 2012,
+                                    AlexNet) and large-scale, labeled datasets. The progress in deep learning continues
+                                    to push renowned public databases to near saturation which, thus, calls for evermore
+                                    challenging image collections to be compiled as databases. In practice, and even
+                                    widely in applied research, using off-the-shelf deep learning models has become the
+                                    norm, as numerous pre-trained networks are available for download and are readily
+                                    deployed to new, unseen data (e.g., VGG-Face, ResNet, amongst other types). We have
+                                    almost grown “spoiled” from such luxury, which, in all actuality, has enabled us to
+                                    stay hidden from many truths. Theoretically, the truth behind what makes neural
+                                    networks more discriminant than ever before is still, in all fairness,
+                                    unclear—rather, they act as a sort of black box to most practitioners and even
+                                    researchers, alike. More troublesome is the absence of tools to quantitatively and
+                                    qualitatively characterize existing deep models, which, in itself, could yield
+                                    greater insights about these all so familiar black boxes. With the frontier moving
+                                    forward at rates incomparable to any spurt of the past, challenges such as high
+                                    variations in illuminations, pose, age, etc., now confront us. However,
+                                    state-of-the-art deep learning models often fail when faced with such challenges
+                                    owing to the difficulties in modeling structured data and visual dynamics.
+                                    <br><br>
+                                    Alongside the effort spent on conventional face recognition is the research done
+                                    across modality learning, such as face and voice, gestures in imagery and motion in
+                                    videos, along with several other tasks. This line of work has attracted attention
+                                    from industry and academic researchers from all sorts of domains. Additionally, and
+                                    in some cases with this, there has been a push to advance these technologies for
+                                    social media based applications. Regardless of the exact domain and purpose, the
+                                    following capabilities must be satisfied: face and body tracking (e.g., facial
+                                    expression analysis, face detection, gesture recognition), lip reading and voice
+                                    understanding, face and body characterization (e.g., behavioral understanding,
+                                    emotion recognition), face, body and gesture characteristic analysis (e.g., gait,
+                                    age, gender, ethnicity recognition), group understanding via social cues (e.g.,
+                                    kinship, non-blood relationships, personality), and visual sentiment analysis (e.g.,
+                                    temperament, arrangement). Thus, needing to be able to create effective models for
+                                    visual certainty has significant value in both the scientific communities and the
+                                    commercial market, with applications that span topics of human-computer interaction,
+                                    social media analytics, video indexing, visual surveillance, and internet vision.
+                                    Currently, researchers have made significant progress addressing many of these
+                                    problems, and especially when considering off-the-shelf and cost-efficient vision HW
+                                    products available these days, e.g. Intel RealSense, Magic Leap, SHORE, and Affdex.
+                                    Nonetheless, serious challenges still remain, which only amplifies when considering
+                                    the unconstrained imaging conditions captured by different sources focused on
+                                    non-cooperative subjects. It is these latter challenges that especially grabs our
+                                    interest, as we sought out to bring together the cutting-edge techniques and recent
+                                    advances of deep learning to solve the challenges <i>in the wild</i>.
+                                    <br><br>
+                                    This one-day serial workshop (AMFG2021) provides a forum for researchers to review
+                                    the recent progress of recognition, analysis, and modeling of face, body, and
+                                    gesture, while embracing the most advanced deep learning systems available for face
+                                    and gesture analysis, particularly, under an unconstrained environment like social
+                                    media and across modalities like face to voice. The workshop includes up to 3
+                                    keynotes and peer-reviewed papers (oral and poster). Original high-quality
+                                    contributions are solicited on the following topics:
+
+                                    <ul>
+                                        <li>Novel deep model, deep learning survey, or comparative study for
+                                            face/gesture recognition;
+                                        </li>
+                                        <li>Deep learning methodology, theory, as applied to social media analytics;
+                                        </li>
+                                        <li>Data-driven or physics-based generative models for faces, poses, and
+                                            gestures;
+                                        </li>
+                                        <li>Deep learning for internet-scale soft biometrics and profiling: age, gender,
+                                            ethnicity, personality, kinship, occupation, beauty ranking, and fashion
+                                            classification
+                                            by facial or body descriptor;
+                                        </li>
+                                        <li>Deep learning for detection and recognition of faces and bodies with large
+                                            3D rotation, illumination change, partial occlusion, unknown/changing
+                                            background, and aging (i.e., in the wild); especially large 3D rotation
+                                            robust face and
+                                            gesture recognition;
+                                        </li>
+                                        <li>Motion analysis, tracking and extraction of face and body models captured
+                                            from several non-overlapping views;
+                                        </li>
+                                        <li>Face, gait, and action recognition in low-quality (e.g., blurred), or
+                                            low-resolution video from fixed or mobile device cameras;
+                                        </li>
+                                        <li>AutoML for face and gesture analysis;</li>
+                                        <li>Mathematical models and algorithms, sensors and modalities for face & body
+                                            gesture and action representation, analysis, and recognition for
+                                            cross-domain social media;
+                                        </li>
+                                        <li>Social/psychological based studies that aid in understanding computational
+                                            modeling and building better automated face and gesture systems with
+                                            interactive
+                                            features;
+                                        </li>
+                                        <li>Multimedia learning models involving faces and gestures (e.g., voice,
+                                            wearable IMUs, and face);
+                                        </li>
+                                        <li>Social applications involving detection, tracking & recognition of face,
+                                            body, and action;
+                                        </li>
+                                        <li>Face and gesture analysis for sentiment analysis in social context;</li>
+                                        <li>Other applications involving face and gesture analysis in social media
+                                            content.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                </font>
+                                </font>
+                                </font>
+                                </div>
+
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="6">
+                                    <strong>Previous AMFG Workshops</strong></font></div>
+
+                                <div class="paragraph"><font style="color:rgb(42, 42, 42)">The first workshop with this
+                                    name was held in 2003, in conjunction with ICCV2003 in Nice, France. So far, it has
+                                    been successfully held NINE times. The homepages of previous five AMFG are as
+                                    follows:&nbsp;
+                                    <!--                                </font><font color="#2a2a2a">&#8203;</font><br/><font color="#2a2a2a">&#8203;&#8203;</font><font-->
+                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2003:&nbsp;</font><u><a-->
+                                    <!--                                        href="http://brigade.umiacs.umd.edu/iccv2003/"><font color="#24678d">http://brigade.umiacs.umd.edu/iccv2003/</font></a></u><br/><font-->
+                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2005:&nbsp;</font><u><a-->
+                                    <!--                                        href="http://mmlab.ie.cuhk.edu.hk/iccv05/"><font color="#24678d">http://mmlab.ie.cuhk.edu.hk/iccv05/</font></a></u><br/><font-->
+                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2007:</font><font-->
+                                    <!--                                        color="#2a2a2a">&nbsp;</font><u><font color="#24678d">http://mmlab.ie.cuhk.edu.hk/iccv07/</font></u><br/><font-->
+                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2010:</font><font-->
+                                    <!--                                        color="#24678d">&nbsp;</font><u><a-->
+                                    <!--                                        href="http://www.lv-nus.org/AMFG2010/cfp.html"><font color="#24678d">http://www.lv-nus.org/AMFG2010/cfp.html</font></a></u><font-->
+                                    <!--                                        color="#24678d">&nbsp;</font><br/>-->
+                                    <font
+                                            style="color:rgb(42, 42, 42)">AMFG2013:</font><font
+                                            color="#2a2a2a">&nbsp;</font><u style=""><a
+                                            href="http://www.northeastern.edu/smilelab/AMFG2013/home.htm" style=""
+                                            target="_blank"><font color="#24678d">http://www.northeastern.edu/smilelab/AMFG2013/home.html</font></a></u><br/><font
+                                            style="color:rgb(42, 42, 42)">AMFG2015:</font><font
+                                            color="#2a2a2a">&nbsp;</font><u style=""><a
+                                            href="http://www.northeastern.edu/smilelab/AMFG2015/home.html"
+                                            style=""><font
+                                            color="#24678d">http://www.northeastern.edu/smilelab/AMFG2015/home.html</font></a></u><br/><font
+
+                                            style="color:rgb(42, 42, 42)">AMFG2017:&nbsp;</font><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/AMFG2017/index.html"
+                                            style=""><font
+                                            color="#24678d">https://web.northeastern.edu/smilelab/AMFG2017/index.html</font></a></u><br/><font
+
+                                            style="color:rgb(42, 42, 42)">AMFG2018:&nbsp;</font><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/AMFG2018/index.html"
+                                            style=""><font
+                                            color="#24678d">https://web.northeastern.edu/smilelab/AMFG2018/index.html</font></a></u><br/><font
+
+                                            style="color:rgb(42, 42, 42)">AMFG2019:&nbsp;</font><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/amfg2019/" style=""><font
+                                            color="#24678d">https://web.northeastern.edu/smilelab/amfg2019/</font></a></u>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wsite-section-wrap">
+                <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-10"
+                     style="background-color: #00575a;background-image: none;">
+                    <div class="wsite-section-content">
+                        <div class="container">
+                            <div class="wsite-section-elements">
+                                <div class="paragraph" style="text-align:center;"><font color="#ffffff"
+                                                                                        size="6"><strong>Important
+                                    Dates</strong></font>
+                                </div>
+
+                                <div>
+                                    <div class="wsite-multicol">
+                                        <div class="wsite-multicol-table-wrap" style="margin:0 10px;">
+
+
+                                            <div class="paragraph"><font color="#ffffff">
+                                                <strong><strike>03/10/2021</strike>[ 04/07/2021 ]</strong> Submission
+                                                Deadline
+                                                <br><br>
+                                                <strike>03/29/2021</strike> <strong>[ 04/14/2021 ]</strong> Notification<br><br>
+                                                <strike>04/05/2021</strike><strong>[ 04/20/2021 ]</strong> Camera-Ready
+                                                Due
+                                            </font><br>
+                                            </div>
+
+
+                                            <div class="paragraph" style="text-align:center;">
+                                                <font color="#ffffff" size="6">
+                                                    <strong>Author Guidelines
+                                                    </strong></font>
+
+                                            </div>
+                                            <font style="color:rgb(255, 255, 255)">Submissions are handled via the
+                                                workshop's CMT website:
+                                                <!--<br><br>-->
+                                                &nbsp;&nbsp;&nbsp;<a
+                                                        href="https://cmt3.research.microsoft.com/BAMFG2021/Submission/Index">https://cmt3.research.microsoft.com/BAMFG2021/Submission/Index</a>
+                                                &nbsp;</font>
+                                            <br><br>
+                                            <font style="color:rgb(255, 255, 255)">Following the guideline of CVPR2021:
+                                                <a href="http://cvpr2021.thecvf.com/node/33#submission-guidelines">http://cvpr2021.thecvf.com/node/33#submission-guidelines</a>
+                                                <ul>
+                                                    <li>8 pages (+ references)</li>
+                                                    <li>Anonymous</li>
+                                                    <li>Using <a
+                                                            href="http://cvpr2021.thecvf.com/sites/default/files/2020-09/cvpr2021AuthorKit_2.zip">
+                                                        CVPR Latex/Word templates</a></li>
+                                                </ul>
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--            <section>-->
+            <!--                <h1>Workshop Organizers</h1>-->
+
+            <!--                <h2>General Chairs</h2>-->
+            <!--                <table align="center" border="0" cellpadding="0" cellspacing="0" width="768">-->
+            <!--                    <tr>-->
+            <!--                        <th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg"></th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg"></th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg">-->
+            <!--                        </th>-->
+            <!--                    </tr>-->
+            <!--                    <tr>-->
+            <!--                        <th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg"></th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg"></th>-->
+            <!--                        <th><img height="150px" src="images/raymond_3.jpg">-->
+            <!--                        </th>-->
+            <!--                    </tr>-->
+            <!--                </table>-->
+            <!--            </section>-->
+            <div class="wsite-section-wrap">
+                <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-10"
+                     style="background-color: #fcfcfc;background-image: none;">
+                    <div class="wsite-section-content">
+                        <div class="container">
+                            <div class="wsite-section-elements">
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
+                                                                                        size="6"><strong>Workshop
+                                    Organizers</strong></font></div>
+
+
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
+                                                                                        size="5"><strong>Honorary Chairs
+                                </strong></font></div>
+
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="resume-content mr-auto">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/RamaChellappa_08192016_6073.JPG"></span>
+                                        </div>
+                                        <h3 class="mb-0">Rama Chellappa,
+                                            <small><span>University of Maryland, USA.</span></small>
+                                        </h3>
+                                        <div class="subheading mb-3">
+                                            <a href="http://users.umiacs.umd.edu/~rama/index.html">http://users.umiacs.umd.edu/~rama/index.html</a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="resume-content mr-auto">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/mturk.png"></span>
+                                        </div>
+                                        <h3 class="mb-0">Matthew A. Turk, <small><span>Toyota Technological Institute at Chicago (TTIC).</span></small>
+                                        </h3>
+                                        <div class="subheading mb-3">
+                                            <a href="https://www.ttic.edu/mturk">https://www.ttic.edu/mturk</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
+                                                                                        size="5"><strong>General Chairs
+                                </strong></font></div>
+
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="resume-content mr-auto">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/raymond_3.jpg"></span>
+                                        </div>
+                                        <h3 class="mb-0">Yun (Raymond) Fu, <small><span>Northeastern University, Boston, USA.</span></small>
+                                        </h3>
+                                        <div class="subheading mb-3">
+                                            <a href="http://www1.ece.neu.edu/~yunfu/">http://www1.ece.neu.edu/~yunfu/</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="resume-content mr-auto">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/mjones.jpeg"></span>
+                                        </div>
+                                        <h3 class="mb-0">Mike Jones, <small><span>Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA.</span></small>
+                                        </h3>
+                                        <div class="subheading mb-3">
+
+                                            <a href="https://www.merl.com/people/mjones">https://www.merl.com/people/mjones</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!--                                <br>-->
+                                <!--                                <div class="resume-item d-flex flex-column flex-md-row mb-2">-->
+                                <!--                                    <div class="resume-content mr-auto">-->
+                                <!--                                        <div class="resume-date text-md-right">-->
+                                <!--                                            <span class="text-primary"><img height="150px"-->
+                                <!--                                                                            src="images/siyu.jpeg"></span>-->
+                                <!--                                        </div>-->
+                                <!--                                        <h3 class="mb-0">Siyu Xia,-->
+                                <!--                                            <small><span>Southeast University, China.</span></small></h3>-->
+                                <!--                                        <div class="subheading mb-3">-->
+                                <!--                                            <a href="http://www.escience.cn/people/siyuxia/">http://www.escience.cn/people/siyuxia/</a>-->
+                                <!--                                        </div>-->
+                                <!--                                        &lt;!&ndash;<p class="small">&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;Dr. Xia received his BE and MS degrees in automation engineering from Nanjing University of Aeronautics and Astronautics, Nanjing, China, in 2000 and 2003, respectively, and the PhD degree in pattern recognition and intelligence system from Southeast University, Nanjing, China, in 2006. He was a visiting scholar in the Department of Computer Science and Engineering, State University of New York at Buffalo from 2010 to 2011. He was a research scientist in the Department of Computer Science and Engineering, SUNY at Buffalo, in 2012. He was a visiting scholar in the College of Electrical and Computer Engineering at Northeastern University, USA, in 2018.  He is currently working as an associate professor in the School of Automation at Southeast University, Nanjing, China. His research interests include image processing, applied machine learning, social media analysis, and intelligent vision systems.&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;</p>&ndash;&gt;-->
+                                <!--                                    </div>-->
+
+
+                                <!--                                </div>-->
+                                <br>
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
+                                                                                        size="5"><strong>Workshop
+                                    Chairs</span></strong>
+                                </font></div>
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/ostadabbas-s.jpg"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">Sarah Ostadabbas, <small><span>Northeastern University, Boston, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="https://web.northeastern.edu/ostadabbas/">https://web.northeastern.edu/ostadabbas/</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<p class="small">-->
+                                    <!--Sarah Ostadabbas is an assistant professor in the Electrical and Computer Engineering Department of-->
+                                    <!--Northeastern University (NEU), Boston, Massachusetts, USA. Prof. Ostadabbas joined NEU in 2016 from-->
+                                    <!--Georgia Tech, where she was a post-doctoral researcher following completion of her PhD at the-->
+                                    <!--University of Texas at Dallas in 2014. At NEU, Sarah is the director of the Augmented Cognition-->
+                                    <!--Laboratory (ACLab) with the goal of enhancing human information-processing capabilities through the-->
+                                    <!--design of adaptive interfaces via physical, physiological, and cognitive state estimation. For a-->
+                                    <!--robust and efficient state estimation, we represent the state of the world in a low-dimensional-->
+                                    <!--embedding called "pose", which is a succinct interpretable representation of the important information-->
+                                    <!--in the state. These representative models are based on rigorous models adaptively parameterized using-->
+                                    <!--machine learning and computer vision algorithms. Prof. Ostadabbas’ research has been awarded by the-->
+                                    <!--National Science Foundation (NSF), Mathworks, Amazon AWS, and NVIDIA. ​She is the co-organizer of the-->
+                                    <!--Multimodal Data Fusion (MMDF2018) workshop, an NSF PI mini-workshop on Deep Learning in Small Data, and-->
+                                    <!--will be the program chair of the upcoming Machine Learning in Signal Processing (MLSP2019) conference.-->
+                                    <!--Prof. Ostadabbas is an associate editor of the IEEE Transactions on Biomedical Circuits and Systems,-->
+                                    <!--on the Editorial Board of the Digital Biomarkers Journal, and has been serving in several signal-->
+                                    <!--processing and machine learning conferences as a technical chair or session chair.-->
+                                    <!--</p>-->
+
+                                    <br>
+
+
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/ming_3.jpg"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">Ming Shao, <small><span>University of Massachusetts, Dartmouth, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="http://www.cis.umassd.edu/~mshao/">http://www.cis.umassd.edu/~mshao/</a>
+                                            </div>
+                                            <!--<p class="small">-->
+                                            <!--Dr. Ding is a Tenure-Track Assistant Professor at Department of Computer, Information and Technology, Indiana University-Purdue University Indianapolis (IUPUI).  He is an active researcher in the fields of face recognition, transfer learning, multi-view learning, and has published over 50 articles in the flagship conferences/journals and books. He serves many leading conferences/workshops in the vision and data mining fields, e.g., the Publicity Chair of AMFG 2017, program co-chair of IEEE Big Data Workshop 2017. He organizes four tutorials on multi-view learning in the FG 2017, CVPR 2018, IEEE BigData 2018, and AAAI 2019. He also serves as program committee for AAAI 2019, CVPR 2018, FG 2017/2018/2019, and reviewers of many prestigious journals including IEEE TPAMI, TNNLS, TKDE, TIP, TMM.-->
+                                            <!--</p>-->
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/Allan.JPG"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">Zhengming Ding, <small><span>Tulane University, New Orleans, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="http://www.cs.tulane.edu/~zding1">http://www.cs.tulane.edu/~zding1</a>
+                                            </div>
+                                            <!--<p class="small">-->
+                                            <!--Dr. Ding is a Tenure-Track Assistant Professor at Department of Computer, Information and Technology, Indiana University-Purdue University Indianapolis (IUPUI).  He is an active researcher in the fields of face recognition, transfer learning, multi-view learning, and has published over 50 articles in the flagship conferences/journals and books. He serves many leading conferences/workshops in the vision and data mining fields, e.g., the Publicity Chair of AMFG 2017, program co-chair of IEEE Big Data Workshop 2017. He organizes four tutorials on multi-view learning in the FG 2017, CVPR 2018, IEEE BigData 2018, and AAAI 2019. He also serves as program committee for AAAI 2019, CVPR 2018, FG 2017/2018/2019, and reviewers of many prestigious journals including IEEE TPAMI, TNNLS, TKDE, TIP, TMM.-->
+                                            <!--</p>-->
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                        <div class="resume-content mr-auto">
+                                            <div class="resume-date text-md-right">
+                                                <span class="text-primary"><img height="150px"
+                                                                                src="images/Sheng_Li_Photo.jpg"></span>
+                                            </div>
+                                            <h3 class="mb-0">Sheng Li, <small><span>University of Georgia, Athens, GA, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="http://cobweb.cs.uga.edu/~shengli/">http://cobweb.cs.uga.edu/~shengli/</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                        <div class="resume-content mr-auto">
+                                            <div class="resume-date text-md-right">
+                                                <span class="text-primary"><img height="150px"
+                                                                                src="images/joface_5.png"></span>
+                                            </div>
+                                            <h3 class="mb-0">Joseph P. Robinson, <small><span> <a
+                                                    href="https://www.vicarioussurgical.com/">Vicarious Surgical</a>, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="https://www.jrobsvision.com/">https://www.jrobsvision.com/</a>
+                                            </div>
+                                            <!--<p class="small">-->
+                                            <!--Joseph received a BS in electrical & computer engineering (2014) and is pursuing a PhD in computer engineering at Northeastern University (NEU), where also works as part-time faculty: designed & taught undergrad course in Data Analytics (4.95/5.00 student rating, 3 semesters). Research is in applied machine vision, with emphasis on faces, deep learning, multimedia, and large databases. Previously, led team to TRECVid debut (MED, obtained 3rd best accuracy). Also, built many image & video datasets most notably FIW. Has served as organizing chair and host of various workshops and challenges (e.g., NECV17, RFIW@ACM-MM17, RFIW@FG18, AMFG@CVPR18, FacesMM@ICME18), tutorials (ACM-MM18), PC member (e.g., CVPR, FG, MIRP, MMEDIA, AAAI), reviewer (e.g., IEEE Transactions on Biomedical Circuits and Systems, Image Processing, Pattern Analysis and Machine Intelligence), and lead positions like president of IEEE@NEU and Relations Officer of IEEE SAC R1 Region. Completed two NSF REUs (2010 & 2011); co-ops at Analogic Corporation (2012) and BBN Technology (2013); interned at MIT Lincoln Labs (2014), System & Technology Research (2016 & 2017), and Snap Inc. (i.e., Snapchat) (2018).-->
+                                            <!--</p>-->
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                        <div class="resume-content mr-auto">
+                                            <div class="resume-date text-md-right">
+                                                <span class="text-primary"><img height="150px"
+                                                                                src="images/Yu_Yin.jpg"></span>
+                                            </div>
+                                            <h3 class="mb-0">Yu Yin,
+                                                <small><span>Northeastern University, Boston, USA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="https://www.jrobsvision.com/">https://www.jrobsvision.com/</a>
+                                            </div>
+                                            <!--<p class="small">-->
+                                            <!--Joseph received a BS in electrical & computer engineering (2014) and is pursuing a PhD in computer engineering at Northeastern University (NEU), where also works as part-time faculty: designed & taught undergrad course in Data Analytics (4.95/5.00 student rating, 3 semesters). Research is in applied machine vision, with emphasis on faces, deep learning, multimedia, and large databases. Previously, led team to TRECVid debut (MED, obtained 3rd best accuracy). Also, built many image & video datasets most notably FIW. Has served as organizing chair and host of various workshops and challenges (e.g., NECV17, RFIW@ACM-MM17, RFIW@FG18, AMFG@CVPR18, FacesMM@ICME18), tutorials (ACM-MM18), PC member (e.g., CVPR, FG, MIRP, MMEDIA, AAAI), reviewer (e.g., IEEE Transactions on Biomedical Circuits and Systems, Image Processing, Pattern Analysis and Machine Intelligence), and lead positions like president of IEEE@NEU and Relations Officer of IEEE SAC R1 Region. Completed two NSF REUs (2010 & 2011); co-ops at Analogic Corporation (2012) and BBN Technology (2013); interned at MIT Lincoln Labs (2014), System & Technology Research (2016 & 2017), and Snap Inc. (i.e., Snapchat) (2018).-->
+                                            <!--</p>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--</section>-->
+
+                                <div class="wsite-section-wrap">
+                                    <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-10"
+                                         style="background-color: #fcfcfc;background-image: none;">
+                                        <div class="wsite-section-content">
+                                            <div class="container">
+                                                <div class="wsite-section-elements">
+                                                    <div class="paragraph" style="text-align:center;"><font
+                                                            color="#2a2a2a"
+                                                            size="5"><strong>Program
+                                                        Committee</strong></font></div>
+
+                                                    <div class="paragraph"><font color="#2a2a2a">
+                                                        <tbody class="wsite-multicol-tbody">
+                                                        <!--&lt;!&ndash;<tr class="wsite-multicol-tr">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">&ndash;&gt;-->
+
+
+                                                        <style type="text/css">
+                                                            #wrap {
+                                                                width: 900px;
+                                                                margin: 0 auto;
+                                                            }
+
+                                                            #left_col {
+                                                                float: left;
+                                                                width: 450px;
+                                                            }
+
+                                                            #right_col {
+                                                                float: right;
+                                                                width: 450px;
+                                                            }
+                                                        </style>
+
+                                                        <div id="wrap">
+                                                            <div id="left_col">
+                                                                <ul>
+                                                                    <li>Handong Zhao, Adobe Research, USA</li>
+                                                                    <li>Bineng Zhong, Huaqiao University</li>
+                                                                    <li>Chengcheng Jia, Huawei, USA</li>
+                                                                    <li>Junchi Yan, Shanghai Jiao Tong University
+                                                                    </li>
+                                                                    <li>Jun Li, Nanjing University of Science and
+                                                                        Technology
+                                                                    </li>
+                                                                    <li>Hong Pan, Southeast University, China</li>
+                                                                    <li>Shuyang Wang, Shiseido Americas</li>
+                                                                    <li>Samson Timoner, ISM Connect</li>
+                                                                    <li>Ali Pourramezan Fard, University of Denver</li>
+                                                                    <li>Anirudh Tunga, Purdue University</li>
+                                                                    <li>Juan Wachs, Purdue University</li>
+                                                                    <li>Ankith Jain Rakesh Kumar, University of
+                                                                        California Riverside
+                                                                    </li>
+                                                                    <li>Bin Sun, Northeastern University</li>
+                                                                    <li>Marah Halawa, Technische Universität Berlin</li>
+                                                                    <li>Nima Aghli, Florida Institute of Technology</li>
+                                                                    <li>René Haas, IT University of Copenhagen</li>
+                                                                    <li>Ronghang Zhu, University of Georgia</li>
+                                                                    <li>Shuyang Wang, Shiseido Americas</li>
+                                                                    <li>Zhongliang Zhou, University of Georgia</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div id="right_col">
+                                                                <ul>
+                                                                    <li>Aleix Martinez, The Ohio State University
+                                                                    </li>
+                                                                    <li>Yingli Tian, City University of New York
+                                                                    </li>
+                                                                    <li>Chengjun Liu, New Jersey Institute of
+                                                                        Technology
+                                                                    </li>
+                                                                    <li>Liang Zheng,  Australian National University
+                                                                    </li>
+                                                                    <li>Thomas Moeslund, Aalborg University, Denmark
+                                                                    </li>
+                                                                    <li>Kai Qin, Swinburne University of Technology
+                                                                    </li>
+                                                                    <li>Binod Bhattarai, Imperial College London</li>
+                                                                    <li>Can Qin, Northeastern University</li>
+                                                                    <li>Chao Gou, Sun Yat-Sen University</li>
+                                                                    <li>Dimitrios Mallis, University of Nottingham</li>
+                                                                    <li>Haoxiang Li, Wormpex AI Research</li>
+                                                                    <li>Jihyun Lee, KAIST</li>
+                                                                    <li>Kushajveer Singh, University of Georgia</li>
+                                                                    <li>Songyao Jiang, Northeastern University</li>
+                                                                    <li>Taotao Jing, Tulane University</li>
+                                                                    <li>Weijun Tan, Linksprite Technologies</li>
+                                                                    <li>Zaid Khan, Northeastern University</li>
+                                                                    <li>Zheng Zhang, Harbin Institute of Technology,
+                                                                        Shenzhen
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="column">
+
+                                                                <!--</div>-->
+                                                            </div>
+                                                            <div class="column">
+                                                                <ul>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </font></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="5">
+                                    <strong>Keynotes</span></strong></font></div>
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/sergey-2021.jpg"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">Sergey Tulyakov, <small><span>Snap Inc.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="http://www.stulyakov.com/">http://www.stulyakov.com/</a>
+                                            </div><br>
+                                            <p><b>Title:</b> <i>Representations for Content Creation, Manipulation and Animation</i>
+                                                <br><b>Abstract.</b>
+                                                “What I cannot create, I do not understand” said the famous writing on Dr. Feynman’s blackboard. The ability to create or to change objects requires us to understand their structure and factors of variation. For example, to draw a face an artist is required to know its composition and have a good command of drawing skills (the latter is particularly challenging for the presenter). Animation additionally requires the knowledge of rigid and non-rigid motion patterns of the object. This talk shows that generation, manipulation and animation skills of deep generative models substantially benefit from such understanding. Moreover we see, the better the models can explain the data they see during training, the higher quality content they are able to generate. Understanding and generation form a loop in which improved understanding improves generation, improving understanding even more. To show this, I detail our works in three areas: video synthesis and prediction, image animation by motion retargeting. I will further introduce a new direction in video generation which allows the user to play videos as they're generated.  In each of these works, the internal representation was designed to facilitate better understanding of the task, resulting in improved generation abilities. Without a single labeled example, our models are able to understand factors of variation, object parts, their shapes, their motion patterns and perform creative manipulations previously only available to trained professionals equipped with specialized software and hardware.
+                                                <br><br><b>Bio.</b>
+                                                Sergey Tulyakov is a Principal Research Scientist heading the Creative Vision team at Snap Research. His work focuses on creating methods for manipulating the world via computer vision and machine learning. This includes human and object understanding, photorealistic manipulation and animation, video synthesis, prediction and retargeting. He pioneered the unsupervised image animation domain with MonkeyNet and First Order Motion Model that sparkled a number of startups in the domain. His work on Interactive Video Stylization received the Best in Show Award at SIGGRAPH Real-Time Live! 2020. He has published 30+ top conference papers, journals and patents resulting in multiple innovative products, including Snapchat Pet Tracking, OurBaby Snappable, Real-time Neural Lenses (gender swap, baby face, aging lens, face animation) and many others. Before joining Snap Inc., Sergey was with Carnegie Mellon University, Microsoft, NVIDIA. He holds a PhD degree from the University of Trento, Italy.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/david.jpeg"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">David Bau, <small><span>MIT Computer Science and Artificial Intelligence Laboratory.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="https://people.csail.mit.edu/davidbau/home/">https://people.csail.mit.edu/davidbau/home/</a>
+                                            </div><br>
+                                            <p><b>Title:</b> <i>Cracking Open AI for Insight and Creativity</i>
+                                                <br><b>Abstract.</b>
+                                                When we treat a model as a black box, we can overlook much of the knowledge that the model contains.  For example, when using inputs or outputs to understand how a neural network responds to a person's hair, we could examine hair color or length because that is what we can easily count externally.  But our simplistic external view might miss a model's internal ability to reason about a wider variety of more subtle hairstyles.  In this talk I will discuss the benefits of cracking open deep networks to understand them from the inside.  Drawing examples from state-of-the-art generative models, I will talk about how a direct look at model internals can help us understand the way a model decomposes problems, what a model is blind to, and how the rules of a model can be modified without training.  We will dissect and manipulate models of scenes, animals, and people, and we will see how opening up models can enable new insights, new applications, and new research questions.
+                                                <br><br><b>Bio.</b>
+                                                David Bau received his A.B. in Mathematics from Harvard, his M.S. in Computer Science from Cornell, and is completing his Ph.D. in EECS at MIT.  David has pioneered methods for the dissection, visualization, and interactive manipulation of deep networks in computer vision, and he is the creator of Network Dissection and GAN Paint, which enable a person to directly edit the internals of state-of-the-art neural networks.  David is coauthor of a widely-used graduate textbook, Numerical Linear Algebra.  Previous to his research at MIT he was an engineer at Google where he built Image Search ranking algorithms, Hangouts realtime communications, and the Pencil Code educational programming system.  David plans to begin as Assistant Professor at Northeastern Khoury school of computer science next year.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+
+                                        <div class="resume-date text-md-right">
+                                            <span class="text-primary"><img height="150px"
+                                                                            src="images/mingyu_2018.jpg"></span>
+                                        </div>
+                                        <div class="resume-content mr-auto">
+                                            <h3 class="mb-0">Ming-Yu Liu, <small><span>NVIDIA.</span></small>
+                                            </h3>
+                                            <div class="subheading mb-3">
+                                                <a href="http://mingyuliu.net/">http://mingyuliu.net/</a>
+                                            </div><br>
+                                            <p><b>Title:</b> <i>Face-vid2vid and GANcraft</i>
+                                                <br><b>Abstract.</b>
+                                                In this talk, I will present our face-vid2vid and GANcraft works. face-vid2vid is a neural talking-head rendering engine we developed for the video-conferencing application. It learns a keypoint representation and decomposition in an unsupervised manner. The representation and decomposition allow us to extract a compact representation from a video frame on the sender side and reconstruct it faithfully on the receiver side. Empirically, we find it achieves 10x bandwidth saving compared to H.264. We also find it allows other applications such as character animation and face redirection. GANcraft is a neural rendering engine for Minecraft worlds. It learns to map the blocky Minecraft worlds to photorealistic real worlds. The key innovation is a way to marry GANs and NeRF. Through the pseudo-image supervision, we overcome the challenge of no corresponding real-world imagery for a Minecraft world.
+                                                <br><br><b>Bio.</b>
+                                                I am a Distinguished Research Scientist and a Manager with NVIDIA Research. My research group focuses on deep generative models and their applications. We have created several high-impact research works. Several of them have enabled exciting new products, including NVIDIA GauGAN and NVIDIA Maxine. I am looking for talents to join my team. Please DM to my NVIDIA email if you are also passionate about generative models and their applications.
+                                                <br>
+                                                Prior to NIVIDA, I was a Principal Research Scientist with Mitsubishi Electric Research Laboratories (MERL). I received my Ph.D. degree from the University of Maryland, College Park, MD, USA, in 2012, advised by Prof. Rama Chellappa.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <br>
+                                <div class="wsite-section-wrap">
+
+
+                                    <div class="wsite-section wsite-body-section wsite-background-11"
+                                         style="background-color: #00575a;background-image: none;">
+                                        <div class="wsite-section-content">
+                                            <div class="container">
+                                                <div class="wsite-section-elements">
+                                                    <div class="paragraph" style="text-align:center;"><font
+                                                            color="#ffffff"
+                                                            size="6"><strong
+                                                            style="">Program Schedule</strong>
+                                                        <br>
+                                                        on 19 June 2021 (Eastern Time (ET)) </font>
+                                                    </div>
+
+                                                    <div id="258741773817831532">
+                                                        <div>
+                                                            <style type="text/css">
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table-wrapper {
+                                                                    padding: 20px 0;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table {
+                                                                    width: 100%;
+                                                                    border: 1px solid #ffffff;
+                                                                    border-spacing: 0;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table td.cell {
+                                                                    border-right: 1px solid #ffffff;
+                                                                    border-bottom: 1px solid #ffffff;
+                                                                    word-break: break-word;
+                                                                    background-color: #FFFFFF;
+                                                                    width: 50%;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table td.cell .paragraph {
+                                                                    width: 90%;
+                                                                    margin: 0 5%;
+                                                                    padding-bottom: 10px;
+                                                                    padding-top: 10px;
+                                                                    text-align: center;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table.style-top tr:first-child td,
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table.style-side td:first-of-type {
+                                                                    background-color: #F8F8F8;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table.style-top tr:first-child td .paragraph,
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table.style-side td:first-of-type .paragraph {
+                                                                    font-weight: 700;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table tr:last-child td {
+                                                                    border-bottom: none;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table td:last-of-type {
+                                                                    border-right: none;
+                                                                }
+
+                                                                #element-9475d6a4-b704-4c47-b6d3-d80ed673931a .simple-table .empty-content-area-element {
+                                                                    padding-left: 0px !important;
+                                                                }
+
+                                                            </style>
+                                                            <!--<font color="#ffffff">TBD</font>-->
+                                                            <div class="platform-element-contents"
+                                                                 data-platform-element-id="702688850553606843-1.4.3"
+                                                                 id="element-9475d6a4-b704-4c47-b6d3-d80ed673931a">
+                                                                <div class="simple-table-wrapper">
+                                                                    <table class="simple-table style-basic">
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">3:00 PM
+                                                                                    </font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Welcome message
+                                                                                </font>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">3:10
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    <b>Keynote 1:</b> David Bau
+                                                                                    <!--                                                                                    <i>A Realistic Dataset and Baseline-->
+                                                                                    <!--                                                                                        Temporal Model for Early-->
+                                                                                    <!--                                                                                        Drowsiness Detection</i>,-->
+                                                                                    <!--                                                                                    Reza Ghoddoosian, Marnib Galib,-->
+                                                                                    <!--                                                                                    Vassilis Athitsos-->
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">3:55PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Xin, Miao; Mo, Shentong; Lin,
+                                                                                    Yuanze. <i>EVA-GCN: Head Pose
+                                                                                    Estimation Based on Graph
+                                                                                    Convolutional Networks</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:00PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Chu, Hau; Lee, Jia-Hong; Lee,
+                                                                                    Yao-Chih;
+                                                                                    Hsu, Ching-Hsien; Li, Jia-Da; Chen,
+                                                                                    Chu-Song.
+                                                                                    <i>Part-aware Measurement for Robust
+                                                                                        Multi-View
+                                                                                        Multi-Human 3D Pose Estimation
+                                                                                        and Tracking</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:05PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Liu, Rushuai; Tan, Weijun. <i>EQFace:
+                                                                                    A Simple Explicit Quality Network
+                                                                                    for Face Recognition</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:10PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Liu, Chih-Ting; Chen, Jun-Cheng;
+                                                                                    Chen,
+                                                                                    Chu-Song; Chien, Shao-Yi. <i>Video-based
+                                                                                    Person
+                                                                                    Re-identification without Bells and
+                                                                                    Whistles</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:15PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Lee, Jihyun; Bhattarai, Binod; Kim,
+                                                                                    Tae-Kyun. <i>Face Parsing from RGB
+                                                                                    and Depth Using
+                                                                                    Cross-Domain Mutual Learning</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:20PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Rakesh Kumar, Ankith Jain; Bhanu,
+                                                                                    Bir. <i>Micro-Expression
+                                                                                    Classification based on
+                                                                                    Landmark Relations with Graph
+                                                                                    Attention
+                                                                                    Convolutional Network</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:25PM</font>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Pourramezan Fard, Ali; abdollahi,
+                                                                                    hojjat;
+                                                                                    Mahoor, Mohammad. <i>ASMNet: a
+                                                                                    Lightweight Deep
+                                                                                    Neural Network for Face Alignment
+                                                                                    and Pose
+                                                                                    Estimation</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">4:30
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Coffe Break
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">5:00
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    <b>Keynote 2:</b> Sergey Tulyakov
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">5:45
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Banerjee, Sandipan; Joshi, Ajjen;
+                                                                                    Mahajan, Prashant; Bhattacharya,
+                                                                                    Sneha; Kyal,
+                                                                                    Survi; Mishra, Taniya. <i>LEGAN:
+                                                                                    Disentangled
+                                                                                    Manipulation of Directional Lighting
+                                                                                    and Facial
+                                                                                    Expressions whilst Leveraging Human
+                                                                                    Perceptual
+                                                                                    Judgements</i>
+
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">5:50
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Vyas, Kathan; Jiang, Le; Liu,
+                                                                                    Shuangjun ;
+                                                                                    Ostadabbas, Sarah. <i>An Efficient
+                                                                                    3D Synthetic
+                                                                                    Model Generation Pipeline for Human
+                                                                                    Pose Data
+                                                                                    Augmentation</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">5:55
+                                                                                        PM</font></div>
+                                                                            </td>
+
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    <b>Keynote 3: </b> Ming-Yu Liu
+                                                                                    <!--                                                                                    Pavlo Molchanov (NVIDIA-->
+                                                                                    <!--                                                                                    Corporation), <i>Semi-supervised-->
+                                                                                    <!--                                                                                        learning for driver-->
+                                                                                    <!--                                                                                        monitoring</i>>-->
+                                                                                </font>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+
+
+<!--                                                                        <tr>-->
+<!--                                                                            <td class="cell">-->
+<!--                                                                                <div class="paragraph"-->
+<!--                                                                                     style="width:40%; text-align:right;">-->
+<!--                                                                                    <font-->
+<!--                                                                                            color="#2a2a2a">6:40-->
+<!--                                                                                        PM</font></div>-->
+<!--                                                                            </td>-->
+<!--                                                                            <td class="cell">-->
+<!--                                                                                <div class="paragraph"-->
+<!--                                                                                     style="text-align:left;"><font-->
+<!--                                                                                        color="#2a2a2a">-->
+<!--                                                                                    A word from Chairs-->
+<!--                                                                                    &lt;!&ndash;                                                                                    <i>Personalized Estimation of&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                        Engagement from Videos Using&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                        Active Learning with Deep&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                        Reinforcement Learning</i>,&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                    Ognjen Rudovic, Hae Won Park, John&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                    Busche, Bjoern W. Schuller, Cynthia&ndash;&gt;-->
+<!--                                                                                    &lt;!&ndash;                                                                                    Breazeal, Rosalind Picard&ndash;&gt;-->
+<!--                                                                                </font>-->
+<!--                                                                                </div>-->
+<!--                                                                            </td>-->
+<!--                                                                        </tr>-->
+
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">6:40
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                    Awards ceremony
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">6:45
+                                                                                        PM</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">Workshop
+                                                                                    adjourned
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+                                                            <div style="clear:both;"></div>
+                                                            <script class="element-script"
+                                                                    type="text/javascript">function setupElement258741773817831532() {
+                                                                var requireFunc = window.platformElementRequire || window.require;
+
+                                                                // Relies on a global require, specific to platform elements
+                                                                requireFunc([
+                                                                    'w-global',
+                                                                    'underscore',
+                                                                    'jquery',
+                                                                    'backbone',
+                                                                    'util/platform/elements/PlatformElement',
+                                                                    'util/platform/elements/PlatformElementSettings'
+                                                                ], function (_W,
+                                                                             _,
+                                                                             $,
+                                                                             Backbone,
+                                                                             PlatformElement,
+                                                                             PlatformElementSettings) {
+                                                                    var dependencies = null || [];
+                                                                    var platform_element_id = "702688850553606843-1.4.3";
+
+                                                                    if (typeof _W.loadedPlatformDependencies === 'undefined') {
+                                                                        _W.loadedPlatformDependencies = [];
+                                                                    }
+
+                                                                    if (typeof _W.platformElements === 'undefined') {
+                                                                        _W.platformElements = [];
+                                                                    }
+
+                                                                    if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+                                                                        _W.platformElements[platform_element_id] = {};
+                                                                        _W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+                                                                        _W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+                                                                    }
+
+                                                                    if (_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length) {
+                                                                        _.reduce(dependencies, function (promise, nextScript) {
+                                                                            _W.loadedPlatformDependencies.push(nextScript);
+                                                                            return promise.then(function () {
+                                                                                return $.getScript(nextScript);
+                                                                            });
+                                                                        }, $().promise()).then(function () {
+                                                                            _W.platformElements[platform_element_id].deferredObject.resolve();
+                                                                        });
+                                                                    }
+
+                                                                    if (dependencies.length === 0) {
+                                                                        _W.platformElements[platform_element_id].deferredObject.resolve();
+                                                                    }
+
+                                                                    _W.platformElements[platform_element_id].deferredPromise.done(function () {
+                                                                        var _ElementDefinition = /**
+                                                                         * This is required for element rendering to be possible
+                                                                         * @type {PlatformElement}
+                                                                         */
+                                                                            (function () {
+                                                                                var SimpleTable = PlatformElement.extend({
+                                                                                    initialize: function () {
+                                                                                        this.setSizes();
+                                                                                    },
+
+                                                                                    setSizes: function () {
+                                                                                        var sizes = this.settings.get('tableSizes');
+                                                                                        // if the # of columns isn't the size of the array of lengths, ignore it.
+                                                                                        if (sizes && sizes != "default" && this.settings.get('columns') == sizes.length) {
+                                                                                            var columns = this.$('tr').each(function (index, value) {
+                                                                                                var cells = $(value).find('td').each(function (index2, value2) {
+                                                                                                    $(value2).css('width', sizes[index2] + '%');
+                                                                                                });
+                                                                                            });
+                                                                                        }
+                                                                                    }
+                                                                                });
+
+                                                                                return SimpleTable;
+                                                                            })();
+
+
+                                                                        if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+                                                                            var _ElementDefinition = PlatformElement.extend({});
+                                                                        }
+
+                                                                        var _Element = _ElementDefinition.extend({
+                                                                            initialize: function () {
+                                                                                // we still want to call the initialize function defined by the developer
+                                                                                // however, we don't want to call it until placeholders have been replaced
+                                                                                this.placeholderInterval = setInterval(function () {
+                                                                                    // so use setInterval to check for placeholders.
+                                                                                    if (this.$('.platform-element-child-placeholder').length == 0) {
+                                                                                        clearInterval(this.placeholderInterval);
+                                                                                        this.constructor.__super__.initialize.apply(this);
+                                                                                    }
+                                                                                }.bind(this), 100);
+                                                                            }
+                                                                        });
+
+                                                                        _Element.prototype.settings = new PlatformElementSettings({
+                                                                            "columns_each": [{"columns_index": 0}, {"columns_index": 1}],
+                                                                            "rows_each": [{"rows_index": 0}, {"rows_index": 1}, {"rows_index": 2}, {"rows_index": 3}, {"rows_index": 4}, {"rows_index": 5}, {"rows_index": 6}, {"rows_index": 7}, {"rows_index": 8}],
+                                                                            "columns": 2,
+                                                                            "rows": 9,
+                                                                            "style": "basic",
+                                                                            "alignment": "center",
+                                                                            "titleColor": "#F8F8F8",
+                                                                            "backgroundColor": "#FFFFFF",
+                                                                            "borderColor": "#ffffff",
+                                                                            "tableSizes": [28, 71]
+                                                                        });
+                                                                        _Element.prototype.settings.page_element_id = "258741773817831532";
+
+                                                                        _Element.prototype.element_id = "9475d6a4-b704-4c47-b6d3-d80ed673931a";
+                                                                        _Element.prototype.user_id = "45182585";
+                                                                        _Element.prototype.site_id = "223558737369296894";
+                                                                        _Element.prototype.assets_path = "//marketplace.editmysite.com/elements/702688850553606843-1.4.3/assets/";
+                                                                        new _Element({
+                                                                            el: '#element-9475d6a4-b704-4c47-b6d3-d80ed673931a'
+                                                                        });
+                                                                    });
+                                                                });
+
+                                                            }
+
+                                                            if (typeof document.documentElement.appReady == 'undefined') {
+                                                                document.documentElement.appReady = 0;
+                                                            }
+
+                                                            if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+                                                                setupElement258741773817831532();
+                                                            } else if (document.createEvent && document.addEventListener) {
+                                                                document.addEventListener('appReady', setupElement258741773817831532, false);
+                                                            } else {
+                                                                document.documentElement.attachEvent('onpropertychange', function (event) {
+                                                                    if (event.propertyName == 'appReady') {
+                                                                        setupElement258741773817831532();
+                                                                    }
+                                                                });
+                                                            }
+
+                                                            </script>
+                                                        </div>
+                                                    </div>
+                                                    -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="overlay w-navpane-close"></div>
+
+                    <script src="files/theme/plugins.js" type="text/javascript"></script>
+                    <script src="files/theme/custom.js" type="text/javascript"></script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

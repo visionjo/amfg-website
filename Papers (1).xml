@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>jrobins1@coe.neu.edu</LastAuthor>
+  <Created>2019-04-03T14:19:40Z</Created>
+  <LastSaved>2019-04-02T17:43:03Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>17440</WindowHeight>
+  <WindowWidth>28040</WindowWidth>
+  <WindowTopX>2780</WindowTopX>
+  <WindowTopY>1560</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="AMFG2019">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="15" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="668"/>
+   <Column ss:AutoFitWidth="0" ss:Width="490"/>
+   <Row>
+    <Cell><Data ss:Type="String">AMFG2019</Data></Cell>
+   </Row>
+   <Row ss:Index="3">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Paper ID</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Paper Title</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Author Names</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Author Emails</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">A Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection</Data></Cell>
+    <Cell><Data ss:Type="String">Reza Ghoddoosian (University of Texas at Arlington)*; MARNIM GALIB (University of Texas at Arlington); Vassilis  Athitsos  (University of Texas at Arlington)</Data></Cell>
+    <Cell><Data ss:Type="String">reza.ghoddoosian@mavs.uta.edu*; marnim.galib@mavs.uta.edu; athitsos@uta.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">Expression Classification in Children</Data></Cell>
+    <Cell><Data ss:Type="String">Shruti Nagpal (IIIT-Delhi); Maneet Singh (IIIT-Delhi, India)*; Mayank Vatsa (IIIT-Delhi); Richa Singh (IIIT-Delhi); Afzel Noore (Texas A&amp;M University-Kingsville)</Data></Cell>
+    <Cell><Data ss:Type="String">Shrutin@iiitd.ac.in; maneets@iiitd.ac.in*; mayank@iiitd.ac.in; rsingh@iiitd.ac.in; afzel.noore@tamuk.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="String">Modelling Multi-Channel Emotions using Facial Expression and Trajectory Cues for Improving Socially-Aware Robot Navigation</Data></Cell>
+    <Cell><Data ss:Type="String">Aniket Bera (The University of North Carolina at Chapel Hill)*; Tanmay Randhavane (The University of North Carolina at Chapel Hill); Dinesh  Manocha (University of North Carolina)</Data></Cell>
+    <Cell><Data ss:Type="String">ab@cs.unc.edu*; tanmay@cs.unc.edu; dm@cs.unc.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">Understanding Beauty via Deep Facial Features</Data></Cell>
+    <Cell><Data ss:Type="String">Xudong Liu (ObEN,Inc.)*; Tao Li (ObEN Inc); Hao Peng (ObEN, Inc.); Iris Chuoying Ouyang (ObEN Inc); Taehwan Kim (ObEN, Inc.); Ruizhe Wang (ObEN, Inc.)</Data></Cell>
+    <Cell><Data ss:Type="String">xdliu@mix.wvu.edu*; tao@oben.com; hpeng@oben.com; iris@oben.com; taehwan@oben.com; ruizhe@oben.com</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15">
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">Personalized Estimation of Engagement from Videos Using Active Learning with Deep Reinforcement Learning</Data></Cell>
+    <Cell><Data ss:Type="String">Ognjen  Rudovic (MIT)*; Hae Won Park (MIT); John Busche (MIT); Bjoern W. Schuller (Imperial College London); Cynthia Breazeal (MIT); Rosalind Picard (MIT Media Lab)</Data></Cell>
+    <Cell><Data ss:Type="String">orudovic@mit.edu*; haewon@media.mit.edu; jcbusche@mit.edu; bjoern.schuller@imperial.ac.uk; cynthiab@media.mit.edu; picard@media.mit.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">LBVCNN: Local Binary Volume Convolutional Neural Network for Facial Expression Recognition from Image Sequences</Data></Cell>
+    <Cell><Data ss:Type="String">Sudhakar Kumawat (Indian Institute of Technology Gandhinagar)*; Manisha Verma (Osaka University); Shanmuganathan Raman (Indian Institute of Technology (IIT) Gandhinagar)</Data></Cell>
+    <Cell><Data ss:Type="String">sudhakar.kumawat@iitgn.ac.in*; manisha.verma89@gmail.com; shanmuga@iitgn.ac.in</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">APA: Adaptive Pose Alignment for Robust Face Recognition</Data></Cell>
+    <Cell><Data ss:Type="String">Zhanfu An (Beijing University of Posts and Telecommunications)*; Weihong Deng (Beijing University of Posts and Telecommunications); Yaoyao Zhong (Beijing University of Posts and Telecommunications); Yaohai Huang (Canon Information Technology (Beijing) Co., Ltd); Xunqiang Tao (Canon Information Technology (Beijing) Co., Ltd)</Data></Cell>
+    <Cell><Data ss:Type="String">646012043@qq.com*; whdeng@bupt.edu.cn; zhongyaoyao@bupt.edu.cn; huangyaohai@hotmail.com; taoxunqiang@canon-ib.com.cn</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell><Data ss:Type="String">2D-3D Heterogeneous Face Recognition based on Deep Coupled Spectral Regression</Data></Cell>
+    <Cell><Data ss:Type="String">Yangtao Zheng (Beihang University, China)*; Di Huang (Beihang University, China); Weixin Li (Beihang University); Wang Shupeng (Beihang University); Yunhong Wang (State Key Laboratory of Virtual Reality Technology and System, Beihang University, Beijing 100191, China)</Data></Cell>
+    <Cell><Data ss:Type="String">ytzheng@buaa.edu.cn*; dhuang@buaa.edu.cn; weixinli@buaa.edu.cn; wangshupeng@buaa.edu.cn; yhwang@buaa.edu.cn</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">Analysis of Deep Fusion Strategies for Multi-modal Gesture Recognition</Data></Cell>
+    <Cell><Data ss:Type="String">Alina Roitberg (KIT)*; Tim Pollert (Karlsruhe Institute of Technology (KIT)); Monica Haurilet (KIT); Manuel Martin (Fraunhofer IOSB); Rainer Stiefelhagen (Karlsruhe Institute of Technology)</Data></Cell>
+    <Cell><Data ss:Type="String">alina.roitberg@kit.edu*; tim.cvprw.submission@gmail.com; haurilet@kit.edu; manuel.martin@iosb.fraunhofer.de; rainer.stiefelhagen@kit.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="String">Efficient and Accurate Face Alignment by Global Regression and Cascaded Local Refinement</Data></Cell>
+    <Cell><Data ss:Type="String">Jinzhan Su (Meitu, Inc)*; Zhe Wang (Meitu, Inc); Chunyuan Liao (Hiscene Technology); Haibin Ling (Temple University)</Data></Cell>
+    <Cell><Data ss:Type="String">sjz@meitu.com*; wz@meitu.com; liaocy@hiscene.com; hbling@temple.edu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Stacked Multi-Target Network for Robust Facial Landmark Localisation</Data></Cell>
+    <Cell><Data ss:Type="String">Yun Yang (Huawei Technologies Co., Ltd.)*; Bing Yu (Huawei Technologies Co., Ltd.); Xiaodong Li (Huawei Technologies Co., Ltd.); Bailan Feng (Huawei Technologies Co., Ltd)</Data></Cell>
+    <Cell><Data ss:Type="String">yangyun18@huawei.com*; yubing5@huawei.com; lixiaodong33@huawei.com; fengbailan@huawei.com</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="String">Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set</Data></Cell>
+    <Cell><Data ss:Type="String">Yu Deng (Tsinghua University); Jiaolong Yang (Microsoft Research Asia)*; Sicheng Xu (Beijing Institute of Technology); Dong Chen (Microsoft Research Asia); Yunde Jia (Beijing Institute of Technology); Xin Tong (Microsoft)</Data></Cell>
+    <Cell><Data ss:Type="String">dengy17@mails.tsinghua.edu.cn; yangjiaolong@gmail.com*; xusicheng@bit.edu.cn; doch@microsoft.com; jiayunde@bit.edu.cn; xtong@microsoft.com</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>3</ActiveRow>
+     <RangeSelection>R4C1:R15C3</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
