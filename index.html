@@ -34,6 +34,22 @@
         padding: 1px;
         font-size: 42px;
         }
+
+        .container2 {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(3, 33%);
+            place-content: space-evenly;
+            /* padding: 0px; */
+            /* height: 0vh; */
+        }
+        .column3 {
+            flex: 1;
+            /* width: 100px; */
+            text-align: center;
+            /* padding: 20px; */
+        }
     </style>
     <meta content="https://web.northeastern.edu/smilelab/amfg2023/images/iccvlogo.png" property="og:image"/>
     <meta content="website" property="og:type"/>
@@ -297,7 +313,7 @@
         <div class="logo"><span class="wsite-logo">
 
 	<a href=https://iccv2023.thecvf.com/>
-		<img alt="ICCV Logo" src="https://iccv2023.thecvf.com/img/LogoICCV23V04.svg" style="margin-top:-2px;margin-left:13px;"/>
+		<img alt="ICCV Logo" src="images/LogoICCV23V04.svg" style="margin-top:-2px;margin-left:13px;"/>
 	</a>
 
 </span></div>
@@ -332,7 +348,7 @@
         <div class="wsite-elements wsite-not-footer wsite-header-elements">
             <div class="wsite-section-wrap">
                 <div class="wsite-section wsite-header-section wsite-section-bg-image"
-                     style="height: 400px;vertical-align: middle;background-image: url(https://iccv2023.thecvf.com/img/animation.acc/1638440985.paristroca.jpg) ;background-repeat: no-repeat ;background-size: 100% ;background-color: transparent ;background-size: cover; opacity:0.9;filter:alpha(opacity=80);">
+                     style="height: 400px;vertical-align: middle;background-image: url(images/background.jpg) ;background-repeat: no-repeat ;background-size: 100% ;background-color: transparent ;background-size: cover; opacity:0.9;filter:alpha(opacity=80);">
                     <div class="wsite-section-content">
 
                         <div class="banner-content">
@@ -350,7 +366,7 @@
                                     <div class="paragraph" style="text-align:center;"><font color="#000000">
                                         <p class="textbackground">
                                             <b>In conjunction with ICCV 2023</b><br>
-                                            <b>October 2 starting from 8:30 AM (Local Time)</b></p></font>
+                                            <b>October 2 starting from 8:45 AM (Local, Paris)</b></p></font>
                                     </div>
                                         </h3>
                                 </div>
@@ -586,29 +602,70 @@
                                         </li>
                                     </ul>
                                     <br>
-                                    <br>
+
                                 </font>
                                 </font>
                                 </font>
                                 </div>
 
                                 <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="6">
+                                    <strong>Previous AMFG Workshops</strong></font></div>
+                                
+                                    <div class="paragraph"><font style="color:rgb(42, 42, 42)">The first AMFG was held in conjunction
+                                        with the 2003 ICCV in Nice, France. So far, it has been successfully held TEN times. The
+                                        homepages of the last three AMFG workshops are as follows:&nbsp;
+
+                                    <ol>
+                                        <li><u style=""><a
+                                            href="http://brigade.umiacs.umd.edu/iccv2003/"
+                                            style=""><font
+                                            color="#24678d">AMFG2003@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="http://mmlab.ie.cuhk.edu.hk/iccv05/"
+                                            style=""><font
+                                            color="#24678d">AMFG2005@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="http://mmlab.ie.cuhk.edu.hk/iccv07/"
+                                            style=""><font
+                                            color="#24678d">AMFG2007@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="http://www.lv-nus.org/AMFG2010/cfp.html "
+                                            style=""><font
+                                            color="#24678d">AMFG2010@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="http://www.northeastern.edu/smilelab/AMFG2013/home.html"
+                                            style=""><font
+                                            color="#24678d">AMFG2013@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="http://www.northeastern.edu/smilelab/AMFG2015/home.html"
+                                            style=""><font
+                                            color="#24678d">AMFG2015@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/AMFG2017/index.html"
+                                            style=""><font
+                                            color="#24678d">AMFG2017@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/AMFG2018/"
+                                            style=""><font
+                                            color="#24678d">AMFG2018@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/amfg2019/"
+                                            style=""><font
+                                            color="#24678d">AMFG2019@CVPR</font></a></u></li>
+                                        <li><u style=""><a
+                                            href="https://web.northeastern.edu/smilelab/amfg2021/"
+                                            style=""><font
+                                            color="#24678d">AMFG2021@CVPR</font></a></u></li>
+                                    </ol>
+                                    <br>
+
+
+                                <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="6">
                                     <strong>Related Workshops</strong></font></div>
 
-                                <div class="paragraph"><font style="color:rgb(42, 42, 42)">The first AMFG was held in conjunction
+                                <!-- <div class="paragraph"><font style="color:rgb(42, 42, 42)">The first AMFG was held in conjunction
                                     with the 2003 ICCV in Nice, France. So far, it has been successfully held TEN times. The
                                     homepages of the last three AMFG workshops are as follows:&nbsp;
-                                    <!--                                </font><font color="#2a2a2a">&#8203;</font><br/><font color="#2a2a2a">&#8203;&#8203;</font><font-->
-                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2003:&nbsp;</font><u><a-->
-                                    <!--                                        href="http://brigade.umiacs.umd.edu/iccv2003/"><font color="#24678d">http://brigade.umiacs.umd.edu/iccv2003/</font></a></u><br/><font-->
-                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2005:&nbsp;</font><u><a-->
-                                    <!--                                        href="http://mmlab.ie.cuhk.edu.hk/iccv05/"><font color="#24678d">http://mmlab.ie.cuhk.edu.hk/iccv05/</font></a></u><br/><font-->
-                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2007:</font><font-->
-                                    <!--                                        color="#2a2a2a">&nbsp;</font><u><font color="#24678d">http://mmlab.ie.cuhk.edu.hk/iccv07/</font></u><br/><font-->
-                                    <!--                                        style="color:rgb(42, 42, 42)">AMFG2010:</font><font-->
-                                    <!--                                        color="#24678d">&nbsp;</font><u><a-->
-                                    <!--                                        href="http://www.lv-nus.org/AMFG2010/cfp.html"><font color="#24678d">http://www.lv-nus.org/AMFG2010/cfp.html</font></a></u><font-->
-                                    <!--                                        color="#24678d">&nbsp;</font><br/>-->
                                     <ul>
                                         <li><font
                                             style="color:rgb(42, 42, 42)">AMFG2018@CVPR:&nbsp;</font><u style=""><a
@@ -628,7 +685,7 @@
                                             href="https://web.northeastern.edu/smilelab/amfg2021/" style=""><font
                                             color="#24678d">https://web.northeastern.edu/smilelab/amfg2021/</font></a></u>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                     Face and gesture (hands) modeling have been long-standing problems in the computer vision community,
                                     and have also been widely explored and studied in many other workshops in recent years, yet
                                     with different emphases compared with AMFG as follows:
@@ -683,11 +740,11 @@
 
 
                                             <div class="paragraph"><font color="#ffffff" size="4">
-                                                <strong>[ 07/21/2023 ]</strong> Submission Deadline
+                                                <s><strong>[ 07/21/2023 ]</strong> Submission Deadline</s>
                                                 <br><br>
-                                                <strong>[ 08/07/2023 ]</strong> Notification<br><br>
-                                                <strong>[ 08/21/2023 ]</strong> Camera-Ready
-                                                Due
+                                                <s><strong>[ 08/07/2023 ]</strong> Notification</s>
+                                                <br><br>
+                                                <s><strong>[ 08/21/2023 ]</strong> Camera-Ready Due</s>
                                             </font><br>
                                             </div>
 
@@ -766,13 +823,13 @@
                                                                                         size="5"><strong>General Chair
                                 </strong></font></div>
 
-                                <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
                                     <div class="resume-content mr-auto">
                                         <div class="resume-date text-md-right">
                                             <span class="text-primary"><img height="150px"
                                                                             src="images/raymond_3.jpg"></span>
                                         </div>
-                                        <h3 class="mb-0">Yun (Raymond) Fu, <small><span>Northeastern University, USA.</span></small>
+                                        <h3 class="mb-0">Yun (Raymond) Fu<br><small><span>Northeastern University, USA.</span></small>
                                         </h3>
                                         <div class="subheading mb-3">
                                             <a href="http://www1.ece.neu.edu/~yunfu/">http://www1.ece.neu.edu/~yunfu/</a>
@@ -799,117 +856,108 @@
                                     <!--</p>-->
 
                                 <br>
+                                <br>
+                                <br>
+                                <br>
+
                                 <div class="paragraph" style="text-align:center;"><font color="#2a2a2a"
                                                                                         size="5"><strong>Workshop Chairs</span></strong>
                                 </font></div>
                                 <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/ming_3.jpg"></span>
-                                            </div>
-                                            <h3 class="mb-0">Ming Shao, <small><span>University of Massachusetts, Dartmouth, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="http://www.cis.umassd.edu/~mshao/">http://www.cis.umassd.edu/~mshao/</a>
-                                            </div>
-                                            <!--<p class="small">-->
-                                            <!--Dr. Ding is a Tenure-Track Assistant Professor at Department of Computer, Information and Technology, Indiana University-Purdue University Indianapolis (IUPUI).  He is an active researcher in the fields of face recognition, transfer learning, multi-view learning, and has published over 50 articles in the flagship conferences/journals and books. He serves many leading conferences/workshops in the vision and data mining fields, e.g., the Publicity Chair of AMFG 2017, program co-chair of IEEE Big Data Workshop 2017. He organizes four tutorials on multi-view learning in the FG 2017, CVPR 2018, IEEE BigData 2018, and AAAI 2019. He also serves as program committee for AAAI 2019, CVPR 2018, FG 2017/2018/2019, and reviewers of many prestigious journals including IEEE TPAMI, TNNLS, TKDE, TIP, TMM.-->
-                                            <!--</p>-->
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/Sheng_Li_Photo.jpg"></span>
-                                            </div>
-                                            <h3 class="mb-0">Sheng Li, <small><span>University of Virginia, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://sheng-li.org/">https://sheng-li.org/</a>
-                                            </div>
-                                            <!--<p class="small">-->
-                                            <!--Dr. Ding is a Tenure-Track Assistant Professor at Department of Computer, Information and Technology, Indiana University-Purdue University Indianapolis (IUPUI).  He is an active researcher in the fields of face recognition, transfer learning, multi-view learning, and has published over 50 articles in the flagship conferences/journals and books. He serves many leading conferences/workshops in the vision and data mining fields, e.g., the Publicity Chair of AMFG 2017, program co-chair of IEEE Big Data Workshop 2017. He organizes four tutorials on multi-view learning in the FG 2017, CVPR 2018, IEEE BigData 2018, and AAAI 2019. He also serves as program committee for AAAI 2019, CVPR 2018, FG 2017/2018/2019, and reviewers of many prestigious journals including IEEE TPAMI, TNNLS, TKDE, TIP, TMM.-->
-                                            <!--</p>-->
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/Hongfu.jpg"></span>
-                                            </div>
-                                            <h3 class="mb-0">Hongfu Liu, <small><span>Brandeis University, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="http://hongfuliu.com/">http://hongfuliu.com/</a>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/joface_5.png"></span>
+                                    <div class="container2">
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/ming_3.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Ming Shao<br><small><span>University of Massachusetts, Dartmouth, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="http://www.cis.umassd.edu/~mshao/">http://www.cis.umassd.edu/~mshao/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <h3 class="mb-0">Joseph P. Robinson, <small><span> Northeastern University, Tufts University, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://www.jrobsvision.com/">https://www.jrobsvision.com/</a>
+                                            <br>
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/joface_5.png"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Joseph P. Robinson<br><small><span> Northeastern University, Tufts University, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://www.jrobsvision.com/">https://www.jrobsvision.com/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <!--<p class="small">-->
-                                            <!--Joseph received a BS in electrical & computer engineering (2014) and is pursuing a PhD in computer engineering at Northeastern University (NEU), where also works as part-time faculty: designed & taught undergrad course in Data Analytics (4.95/5.00 student rating, 3 semesters). Research is in applied machine vision, with emphasis on faces, deep learning, multimedia, and large databases. Previously, led team to TRECVid debut (MED, obtained 3rd best accuracy). Also, built many image & video datasets most notably FIW. Has served as organizing chair and host of various workshops and challenges (e.g., NECV17, RFIW@ACM-MM17, RFIW@FG18, AMFG@CVPR18, FacesMM@ICME18), tutorials (ACM-MM18), PC member (e.g., CVPR, FG, MIRP, MMEDIA, AAAI), reviewer (e.g., IEEE Transactions on Biomedical Circuits and Systems, Image Processing, Pattern Analysis and Machine Intelligence), and lead positions like president of IEEE@NEU and Relations Officer of IEEE SAC R1 Region. Completed two NSF REUs (2010 & 2011); co-ops at Analogic Corporation (2012) and BBN Technology (2013); interned at MIT Lincoln Labs (2014), System & Technology Research (2016 & 2017), and Snap Inc. (i.e., Snapchat) (2018).-->
-                                            <!--</p>-->
                                         </div>
-
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/ztao.jpg"></span>
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/Sheng_Li_Photo.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Sheng Li<br><small><span>University of Virginia, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://sheng-li.org/">https://sheng-li.org/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <h3 class="mb-0">Zhiqiang Tao,
-                                                <small><span>Rochester Institute of Technology, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://ztao.cc/">https://ztao.cc/</a>
+                                            <br>
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/ztao.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Zhiqiang Tao<br><small><span>Rochester Institute of Technology, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://ztao.cc/">https://ztao.cc/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <!--<p class="small">-->
-                                            <!--Joseph received a BS in electrical & computer engineering (2014) and is pursuing a PhD in computer engineering at Northeastern University (NEU), where also works as part-time faculty: designed & taught undergrad course in Data Analytics (4.95/5.00 student rating, 3 semesters). Research is in applied machine vision, with emphasis on faces, deep learning, multimedia, and large databases. Previously, led team to TRECVid debut (MED, obtained 3rd best accuracy). Also, built many image & video datasets most notably FIW. Has served as organizing chair and host of various workshops and challenges (e.g., NECV17, RFIW@ACM-MM17, RFIW@FG18, AMFG@CVPR18, FacesMM@ICME18), tutorials (ACM-MM18), PC member (e.g., CVPR, FG, MIRP, MMEDIA, AAAI), reviewer (e.g., IEEE Transactions on Biomedical Circuits and Systems, Image Processing, Pattern Analysis and Machine Intelligence), and lead positions like president of IEEE@NEU and Relations Officer of IEEE SAC R1 Region. Completed two NSF REUs (2010 & 2011); co-ops at Analogic Corporation (2012) and BBN Technology (2013); interned at MIT Lincoln Labs (2014), System & Technology Research (2016 & 2017), and Snap Inc. (i.e., Snapchat) (2018).-->
-                                            <!--</p>-->
                                         </div>
-
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                        <div class="resume-content mr-auto">
-                                            <div class="resume-date text-md-right">
-                                                <span class="text-primary"><img height="150px"
-                                                                                src="images/Yu_Yin.jpg"></span>
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/Hongfu.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Hongfu Liu<br><small><span>Brandeis University, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="http://hongfuliu.com/">http://hongfuliu.com/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <h3 class="mb-0">Yu Yin,
-                                                <small><span>Northeastern University, USA.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://yin-yu.github.io/">https://yin-yu.github.io/</a>
+                                            <br>
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/Yu_Yin.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Yu Yin<br><small><span>Northeastern University, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://yin-yu.github.io/">https://yin-yu.github.io/</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <!--<p class="small">-->
-                                            <!--Joseph received a BS in electrical & computer engineering (2014) and is pursuing a PhD in computer engineering at Northeastern University (NEU), where also works as part-time faculty: designed & taught undergrad course in Data Analytics (4.95/5.00 student rating, 3 semesters). Research is in applied machine vision, with emphasis on faces, deep learning, multimedia, and large databases. Previously, led team to TRECVid debut (MED, obtained 3rd best accuracy). Also, built many image & video datasets most notably FIW. Has served as organizing chair and host of various workshops and challenges (e.g., NECV17, RFIW@ACM-MM17, RFIW@FG18, AMFG@CVPR18, FacesMM@ICME18), tutorials (ACM-MM18), PC member (e.g., CVPR, FG, MIRP, MMEDIA, AAAI), reviewer (e.g., IEEE Transactions on Biomedical Circuits and Systems, Image Processing, Pattern Analysis and Machine Intelligence), and lead positions like president of IEEE@NEU and Relations Officer of IEEE SAC R1 Region. Completed two NSF REUs (2010 & 2011); co-ops at Analogic Corporation (2012) and BBN Technology (2013); interned at MIT Lincoln Labs (2014), System & Technology Research (2016 & 2017), and Snap Inc. (i.e., Snapchat) (2018).-->
-                                            <!--</p>-->
                                         </div>
-
                                     </div>
                                 </div>
 
-                                <!--</section>-->
+                                <br>
+                                <br>
 
                                 <div class="wsite-section-wrap">
                                     <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-10"
@@ -1015,17 +1063,14 @@
                                                         </div>
 
 
-                                                        <div class="row">
+                                                        <!-- <div class="row">
                                                             <div class="column">
-
-                                                                <!--</div>-->
                                                             </div>
                                                             <div class="column">
                                                                 <ul>
-
                                                                 </ul>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </font></div>
                                                 </div>
                                             </div>
@@ -1033,12 +1078,66 @@
 
                                     </div>
                                 </div>
-
+                                
                                 <br>
+                                <br>
+                                <br>
+                                <br>
+
                                 <div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="5">
                                     <strong>Keynotes</span></strong></font></div>
+                                    
                                 <div class="resume-item d-flex flex-column flex-md-row mb-2">
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
+                                    <div class="container2">
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/photo_rama-chellappa.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Rama Chellappa <a href="https://engineering.jhu.edu/faculty/rama-chellappa/">(Bio)</a>
+                                                        <br><small><span>Johns Hopkins University, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://engineering.jhu.edu/faculty/rama-chellappa/">https://engineering.jhu.edu/faculty/rama-chellappa/</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/Ting_Chun_Wang.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Ting-Chun Wang<br><small><span>NVIDIA, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://research.nvidia.com/person/ting-chun-wang">https://research.nvidia.com/person/ting-chun-wang</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column2">
+                                            <div class="resume-item d-flex flex-column flex-md-row mb-2" style="text-align:center;">
+                                                <div class="resume-content mr-auto">
+                                                    <div class="resume-date text-md-right">
+                                                        <span class="text-primary"><img height="150px"
+                                                                                        src="images/Xiaoming_Liu.jpg"></span>
+                                                    </div>
+                                                    <h3 class="mb-0">Xiaoming Liu<br><small><span>Michigan State University, USA.</span></small>
+                                                    </h3>
+                                                    <div class="subheading mb-3">
+                                                        <a href="https://www.cse.msu.edu/~liuxm/index2.html">https://www.cse.msu.edu/~liuxm/index2.html</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="resume-item d-flex flex-column flex-md-row mb-2">
                                         <div class="resume-date text-md-right">
                                             <span class="text-primary"><img height="150px"
                                                                             src="images/photo_rama-chellappa.jpg"></span>
@@ -1057,73 +1156,6 @@
                                             </p>
                                         </div>
                                     </div>
-
-
-                                    <!-- <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-
-                                        <div class="resume-date text-md-right">
-                                            <span class="text-primary"><img height="150px"
-                                                                            src="images/photo_mturkTTIC.jpg"></span>
-                                        </div>
-                                        <div class="resume-content mr-auto">
-                                            <h3 class="mb-0">Matthew Turk (Tentative), <small><span>Toyota Technological Institute at Chicago.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://home.ttic.edu/~mturk/">https://home.ttic.edu/~mturk/</a>
-                                            </div><br>
-                                            <p><b>Title:</b> <i>TBD</i>
-                                                <br><b>Abstract.</b>
-                                                TBD.
-                                                <br><b>Bio.</b>
-                                                TBD.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-
-                                        <div class="resume-date text-md-right">
-                                            <span class="text-primary"><img height="150px"
-                                                                            src="images/photo_todd_zickler.gif"></span>
-                                        </div>
-                                        <div class="resume-content mr-auto">
-                                            <h3 class="mb-0">Todd Zickler (Tentative), <small><span>Harvard University.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="http://www.eecs.harvard.edu/~zickler/Main/HomePage">http://www.eecs.harvard.edu/~zickler/Main/HomePage</a>
-                                            </div><br>
-                                            <p><b>Title:</b> <i>TBD</i>
-                                                <br><b>Abstract.</b>
-                                                TBD.
-                                                <br><b>Bio.</b>
-                                                TBD.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    <div class="resume-item d-flex flex-column flex-md-row mb-2">
-
-                                        <div class="resume-date text-md-right">
-                                            <span class="text-primary"><img height="150px"
-                                                                            src="images/photo_OlgaRussakovsky.jpg"></span>
-                                        </div>
-                                        <div class="resume-content mr-auto">
-                                            <h3 class="mb-0">Olga Russakovsky (Tentative), <small><span>Princeton University.</span></small>
-                                            </h3>
-                                            <div class="subheading mb-3">
-                                                <a href="https://www.cs.princeton.edu/~olgarus/">https://www.cs.princeton.edu/~olgarus/</a>
-                                            </div><br>
-                                            <p><b>Title:</b> <i>TBD</i>
-                                                <br><b>Abstract.</b>
-                                                TBD.
-                                                <br><b>Bio.</b>
-                                                TBD.
-                                            </p>
-                                        </div>
-                                    </div> -->
-
                                     <br>
                                     <div class="resume-item d-flex flex-column flex-md-row mb-2">
 
@@ -1165,9 +1197,11 @@
                                                 TBD.
                                             </p>
                                         </div>
-                                    </div>                                   
+                                    </div>                                    -->
 
                                 </div>
+                                <br>
+                                <br>
                                 <br>
                                 <br>
                                 <div class="wsite-section-wrap">
@@ -1181,9 +1215,25 @@
                                                     <div class="paragraph" style="text-align:center;"><font
                                                             color="#ffffff"
                                                             size="6"><strong
+                                                            style="">Unlocking the Mysteries of Face & Gesture: The Next Frontier in Deep Learning - The 11th AMFG2023 Workshop</strong></font>
+                                                    </div>
+                                                    <div class="paragraph" style="text-align:left;"><font
+                                                            color="#ffffff"
+                                                            size="3">In today's digital landscape, which is teeming with facial, gestural, and cross-modality data, the competition to achieve perfect recognition and analysis has reached its zenith. The AMFG2023 Workshop is a hub of innovative thinkers, state-of-the-art deep learning techniques, and complex challenges waiting to be solved. As we delve into social media, voice-to-face modalities, and more, this workshop focuses on the intricate details of the ever-evolving fields of face, body, and gesture modeling.
+                                                            <br>
+                                                            With renowned public databases nearing saturation and off-the-shelf deep learning models becoming ubiquitous, AMFG2023 offers a fresh perspective. It encourages participants to delve deeper into the neural network "black box," providing both a lens to dissect current models and a canvas for innovation. The emphasis is on real-world challenges, such as lighting, pose, and age variations, where conventional models often need to catch up.
+                                                            <br>
+                                                            This one-day event promises an engaging blend of keynote sessions and peer-reviewed presentations, fostering a collaborative space for visionaries across industries. From novel deep models, AutoML, and internet-scale biometrics to trustworthy learning and multimedia models, the thematic spectrum is vast and captivating.
+                                                            <br>
+                                                            Join us as we unravel the complexities of today's face and gesture analysis, pushing boundaries and forging new paths in the wild, unconstrained territories of deep learning. At AMFG2023, the future is not just seen but shaped.</font>
+                                                    </div>
+
+                                                    <div class="paragraph" style="text-align:center;"><font
+                                                            color="#ffffff"
+                                                            size="6"><strong
                                                             style="">Program Schedule</strong>
                                                         <br>
-                                                        on October 2 (Local Time) </font>
+                                                        on October 2 (Local, Paris) </font>
                                                     </div>
 
                                                     <div id="258741773817831532">
@@ -1249,14 +1299,13 @@
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">8:30 AM
-                                                                                    </font></div>
+                                                                                            color="#2a2a2a">8:45</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                    Chairs' opening remarks
+                                                                                        Chars' Opening Remarks
                                                                                 </font>
                                                                                 </div>
                                                                             </td>
@@ -1266,19 +1315,14 @@
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">8:45 AM
-                                                                                        </font></div>
+                                                                                            color="#2a2a2a">9:00</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Invited talk I
-                                                                                    <!--                                                                                    <i>A Realistic Dataset and Baseline-->
-                                                                                    <!--                                                                                        Temporal Model for Early-->
-                                                                                    <!--                                                                                        Drowsiness Detection</i>,-->
-                                                                                    <!--                                                                                    Reza Ghoddoosian, Marnib Galib,-->
-                                                                                    <!--                                                                                    Vassilis Athitsos-->
+                                                                                        Ting-Chun Wang, NVIDIA,<br>
+                                                                                        Invited Talk #1: <i>Neural Face Synthesis and Animation</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
@@ -1288,103 +1332,327 @@
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">9:30 AM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">10:00</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Coffee break I</i>
+                                                                                        In Kyu Park, Inha University,<br>
+                                                                                        *Oral Presentation #1: <i>M2C: Concise Music Representation for 3D Dance Generation</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">10:00 AM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">10:15</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Oral session I
+                                                                                        Maksym Ivashechkin, University of Surrey,<br>
+                                                                                        *Oral Presentation #2: <i>Denoising Diffusion for 3D Hand Pose Estimation from Images</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">12:30 PM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">10:30</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Lunch break
+                                                                                        Coffee Break I</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">2:00 PM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">11:00</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Invited talk II
+                                                                                        Giorgos Karvounas, CSD-UOC and ICS-FORTH,<br>
+                                                                                        *Oral Presentation #3: <i>Dynamic Multiview Refinement of 3D Hand Datasets using Differentiable Ray Tracing</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">2:45 PM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">11:15</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Coffee break II
+                                                                                        Noha Sarhan, University of Hamburg,<br>
+                                                                                        *Oral Presentation #4: <i>Unraveling a Decade: A Comprehensive Survey on Isolated Sign Language Recognition</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">3:15 PM</font>
-                                                                                </div>
+                                                                                            color="#2a2a2a">11:30</font></div>
                                                                             </td>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="text-align:left;"><font
                                                                                         color="#2a2a2a">
-                                                                                        Oral session II
+                                                                                        Manuel Kansy, ETH Zurich,<br>
+                                                                                        *Oral Presentation #5: <i>Controllable Inversion of Black-Box Face Recognition Models via Diffusion</i>
                                                                                 </font></div>
                                                                             </td>
                                                                         </tr>
+
                                                                         <tr>
                                                                             <td class="cell">
                                                                                 <div class="paragraph"
                                                                                      style="width:40%; text-align:right;">
                                                                                     <font
-                                                                                            color="#2a2a2a">5:00 PM</font>
+                                                                                            color="#2a2a2a">11:45</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Pietro Melzi, Universidad Autonoma de Madrid,<br>
+                                                                                        *Oral Presentation #6: <i>GANDiffFace: Controllable Generation of Synthetic Datasets for Face Recognition with Realistic Variations</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">12:00</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Ce Zheng, University of Central Florida,<br>
+                                                                                        *Oral Presentation #7: <i>POSTER: A Pyramid Cross-Fusion Transformer Network for Facial Expression Recognition</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">12:15</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Weng-Tai Su, National Tsing Hua University,<br>
+                                                                                        *Oral Presentation #8: <i>Kinship Representation Learning with Face Componential Relation</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">12:30</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        &dagger;Lunch Break (AMFG Poster Session)
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">13:45</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Chi Xu, Osaka University,<br>
+                                                                                        *Oral Presentation #9: <i>Occluded Gait Recognition via Silhouette Registration Guided by Automated Occlusion Degree Estimation</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">14:00</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Ammar Qammaz, CSD-UOC and ICS-FORTH,<br>
+                                                                                        *Oral Presentation #10: <i>A Unified Approach for Occlusion Tolerant 3D Facial Pose Capture and Gaze Estimation using MocapNETs</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">14:15</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Rama Chellappa, Johns Hopkins University,<br>
+                                                                                        Invited Talk #2: <i>Person Recognition and Identification at Altitude and Range</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">15:15</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Coffee Break II
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">15:45</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Raja Kumar, University of California Santa Cruz,<br>
+                                                                                        *Oral Presentation #11: <i>Disjoint Pose and Shape for 3D Face Reconstruction</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">16:00</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Andreas Döring, University of Bonn,<br>
+                                                                                        *Oral Presentation #12: <i>A Gated Attention Transformer for Multi-Person Pose Tracking</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">16:15</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Cédric Rommel, valeo.ai,<br>
+                                                                                        *Oral Presentation #13: <i>DiffHPE: Robust, Coherent 3D Human Pose Lifting with Diffusion</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">16:30</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Bernhard Egger, Friedrich-Alexander-University Erlangen-Nuremberg,<br>
+                                                                                        *Oral Presentation #14: <i>PoseBias: On Dataset Bias and Task Difficulty - Is there an Optimal Camera Position for Facial Image Analysis?</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">16:45</font></div>
+                                                                            </td>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="text-align:left;"><font
+                                                                                        color="#2a2a2a">
+                                                                                        Xiaoming Liu, Michigan State University,<br>
+                                                                                        Invited Talk #3: <i>Person Identification at a (Far) Distance</i>
+                                                                                </font></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td class="cell">
+                                                                                <div class="paragraph"
+                                                                                     style="width:40%; text-align:right;">
+                                                                                    <font
+                                                                                            color="#2a2a2a">17:45</font>
                                                                                 </div>
                                                                             </td>
                                                                             <td class="cell">
@@ -1543,9 +1811,15 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="paragraph" style="text-align:left;"><font
+                                                            color="#ffffff"
+                                                            size="3"><strong
+                                                            style="">* Each oral presentation is 12 minutes, with 3 minutes for questions. See &dagger; below.<br>
+                                                            &dagger; All oral presentations will be presented during the poster session for continued conversation and additional questions.
+                                                            </strong></font>
+                                                    </div>
 
-
-                                                    <div class="paragraph" style="text-align:center;"><font color="#ffffff"
+                                                    <!-- <div class="paragraph" style="text-align:center;"><font color="#ffffff"
                                                         size="6"><strong>Accepted Workshop Papers</strong></font></div>
 
                                                     <div class="paragraph"><font color="#ffffff">
@@ -1581,7 +1855,7 @@
                                                                 Rommel, Cédric*; Valle, Eduardo; Chen, Mickael; Khalfaoui, Souhaiel; Marlet, Renaud; Cord, Matthieu; Pérez, Patrick</li>
                                                             
                                                         </ul>
-                                                    </font></div>
+                                                    </font></div> -->
                                                 </div>
                                             </div>
                                         </div>
